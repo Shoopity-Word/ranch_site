@@ -23,7 +23,6 @@ body {
 
 .main-nav {
   background-color: #f5f2e9;
-  padding: 10px 0;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -43,10 +42,18 @@ body {
   color: #333;
   text-decoration: none;
   font-family: serif;
-  font-size: 1em;
-  padding: 5px 10px;
-  text-align: center;
-  border-left: 3px solid black;
+  padding: 10px;
+  display: inline-flex;
+}
+
+.main-nav .nav-list li {
+  border-left: 1px solid lightgrey;
+  text-align:center;
+  flex: 0 1 auto;
+}
+
+.main-nav .nav-list li:last-child {
+  border-right: 1px solid lightgray;
 }
 
 .main-nav .nav-list li a:hover {
