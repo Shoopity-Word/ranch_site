@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url('https://shoopity-word.github.io/Images/1030687858.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.content {
+  background:
+    url('https://shoopity-word.github.io/Images/content-bg-top.png') top center no-repeat,
+    url('https://shoopity-word.github.io/Images/content-bg-bottom.png') bottom center no-repeat,
+    url('https://shoopity-word.github.io/Images/content-bg.png') center center repeat-y;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 4rem auto;
+  border-radius: 0px;
+}
