@@ -11,7 +11,28 @@ body {
 }
 
 body#home .main-nav .nav-list li:nth-child(1) {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+body#cabins .main-nav .nav-list li:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+body#rates .main-nav .nav-list li:nth-child(3) {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+body#story .main-nav .nav-list li:nth-child(4) {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+body#attractions .main-nav .nav-list li:nth-child(5) {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+body#photos .main-nav .nav-list li:nth-child(6) {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
 .content {
