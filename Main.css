@@ -139,11 +139,11 @@ a {
 }
 
 .nice-btn:hover {
-  background-color: #0069d9;
+  background: linear-gradient(to bottom, #58280E, #411d0b);
 }
 
 .nice-btn:active {
-  background-color: #0056b3;
+  background: linear-gradient(to top, #58280E, #411d0b);
   transform: scale(0.98);
 }
 
