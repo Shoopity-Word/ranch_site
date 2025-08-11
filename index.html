@@ -6,30 +6,142 @@
   <link rel="stylesheet" href="Main.css">
 </head>
 <body id="home">
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cabins.html">Cabins</a></li>
-      <li><a href="rates.html">Rates and Reservations</a></li>
-      <li><a href="story.html">Story of the Ranch</a></li>
-      <li><a href="attractions.html">Area Attractions</a></li>
-      <li><a href="photos.html">Photos and Directions</a></li>
-    </ul>
-  </nav>
-  <div class="content">
-    <h1>to the Continental Ranch</h1>
-    <p>This is an example page with a fixed background image that stays in place as you scroll.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-    <p>Scroll down to see the effect.</p>
-    <p style="margin-top: 150px;">End of content</p>
+  <header>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cabins.html">Cabins</a></li>
+        <li><a href="rates.html">Rates and Reservations</a></li>
+        <li><a href="story.html">Story of the Ranch</a></li>
+        <li><a href="attractions.html">Area Attractions</a></li>
+        <li><a href="photos.html">Photos and Directions</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="bannerMessage" style="position: relative;">
+    <div style="background-color:  rgba(241, 241, 241, 0.7); width: 100%; padding: 1rem 0">
+      <h1>THE CONTINENTAL RANCH</h1>
+      <h2>CABIN RENTALS</h2>
+      <h3>continentalranchatcreede@gmail.com</h3>
+    </div>
+    <div style="position: relative;">
+      <!--Need to keep the first image relative to get the height info
+      Width is defined to be as wide as the border of the DIV, ignoring the padding
+      Margins are set to start at the top left of the border of the DIV-->
+      <img src="https://shoopity-word.github.io/images/BG_banner_short.png"
+        style="
+          display: block;
+          width: 100%;
+          height: auto;
+        ">
+      <!--The second image is absolute to float over the previous image
+      It's offset slightly as this image is the "top of a stack of images"
+      The width needs to be the width of the DIV
+      The max-width is the maxWidth of the page, plus the padding, minus the offset of the aligning-->
+      <img src="https://shoopity-word.github.io/images/View_Pano.jpg"
+        style="
+          position:absolute;
+          display: block;
+          top: 11px;
+          left: 6px;
+          width: 100%;
+          max-width: calc(100% - 12px);
+          height: auto;"
+        >
+    </div>
+    <div style="position: relative;">
+      <img src="https://shoopity-word.github.io/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
+    </div>
   </div>
   <div class="content">
-    <h1>Welcome to the Continental Ranch</h1>
-    <p>This is an example page with a fixed background image that stays in place as you scroll.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-    <p>Scroll down to see the effect.</p>
-    <p style="margin-top: 150px;">End of content</p>
+    <div style="text-align: center;">
+      <button class="nice-btn" onclick="window.open('https://resnexus.com/resnexus/reservations/book/2A285158-EAA8-47AC-9FDE-B92A9A0BBCA1', '_blank')">Book Now</button>
+    </div>
+    <div style="text-align: center; color: #8D5024; font-style: italic;">
+      <h2>Welcome to our rustic pioneer cabins in the San Juan Mountains of Colorado.<br>
+        Forest Service Rd 513, Creede, CO</h2>
+    </div>
+    <div class="image-row" style="display: flex; gap: 1rem;">
+      <div class="oval-border">
+        <img src="https://shoopity-word.github.io/images/2cabins.jpg" alt="Two Cabins" class="popup-img">
+      </div>
+      <div class="oval-border">
+        <img src="https://shoopity-word.github.io/images/2horses.jpg" alt="Two Hourses" class="popup-img">
+      </div>
+      <div class="oval-border">
+        <img src="https://shoopity-word.github.io/images/bradley-house-1.jpg" alt="Main House" class="popup-img">
+      </div>
+    </div>
+    <div id="imgModal">
+      <span class="closeBtn">&times;</span>
+      <img src="" alt="Full Size Image">
+    </div>
+    <p style="color: #8D5024; font-style: italic;">The Continental Ranch has been family owned and operated since 1924.</p>
+    <p style="color: #8D5024; font-style: italic;">We hope you’ll decide to join us for an unforgettable stay.</p>
+    <p>The Ranch is located in a high mountain park known as North Clear Creek Park, named for the stream that flows through the park and the Ranch property. 
+      The elevation is about 10,000 feet above sea level making it an ideal place for folks to escape the hot summer weather of lower elevations.</p>
+    <p>Surrounding the park and the Ranch are mountains, streams and lakes of the Rio Grande National Forest providing plenty of opportunity for fishing,
+       horseback riding, hiking, 4-wheeling, and hunting in season as well as almost any other outdoor mountain activity you can think of. 
+       The view of the surrounding mountains is magnificent.</p>
+    <hr>
+    <p><b>Driving Directions:</b><br>
+      <ul>
+        <li>The Ranch is between Creede and Lake City just two miles off Hwy 149.</li>
+        <li>Forest Service Road 513 exits Hwy 149 between mileposts 48 and 49 and provides access to the ranch.</li>
+        <li>There are some signs as you turn onto the Forest Service Road pointing to the Continental Reservoir and Rito Hondo Reservoir.</li>
+        <li>There is a small sign on the right side of Forest Road 513 that says "Continental Ranch Cabin Rentals 2 miles."</li>
+        <li>You will cross two cattle guards.</li>
+        <li>The entrance to the ranch is on the left. <a href="https://continentalranchatcreede.com/photos-and-directions.html">Click for more detailed directions</a>.</li>
+      </ul>
+    </p>
   </div>
+  <footer style="text-align: center;">
+    <div style="position: relative;">
+      <img src="https://shoopity-word.github.io/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cabins.html">Cabins</a></li>
+        <li><a href="rates.html">Rates and Reservations</a></li>
+        <li><a href="story.html">Story of the Ranch</a></li>
+        <li><a href="attractions.html">Area Attractions</a></li>
+        <li><a href="photos.html">Photos and Directions</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script>
+    const modal = document.getElementById('imgModal');
+    const modalImg = modal.querySelector('img');
+    const closeBtn = modal.querySelector('.closeBtn');
+
+    document.querySelectorAll('.popup-img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;   // Use same image src
+        modalImg.alt = img.alt || 'Full Size Image';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      modalImg.src = '';
+    });
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        modalImg.src = '';
+      }
+    });
+
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        modal.style.display = 'none';
+        modalImg.src = '';
+      }
+    });
+  </script>
 </body>
 </html>
 
