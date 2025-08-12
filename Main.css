@@ -3,6 +3,10 @@
   --maxWidth: 800px;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -77,9 +81,10 @@ a {
   padding-bottom: 0;
   position: relative;
   color: #E0BF5C;
-  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
 }
 
+/* Navigation Styles */
 .main-nav {
   background-color: #f5f2e9;
   text-align: center;
@@ -124,7 +129,9 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
+/******************************/
 
+/* Button Stylings */
 .nice-btn {
   background: linear-gradient(to bottom, #8C502A, #58280E);
   color: white;
@@ -146,6 +153,7 @@ a {
   background: linear-gradient(to top, #58280E, #411d0b);
   transform: scale(0.98);
 }
+/*********************************/
 
 .oval-border {
   flex: 1 1 0;
@@ -173,7 +181,7 @@ a {
   cursor: pointer;
 }
 
-/* Button Styling */
+/* Lightbox styling */
 #imgModal {
   display: none;
   position: fixed;

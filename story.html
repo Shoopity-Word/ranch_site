@@ -4,30 +4,72 @@
   <meta charset="UTF-8">
   <title>Continental Ranch at Creede</title>
   <link rel="stylesheet" href="Main.css">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
 <body id="story">
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cabins.html">Cabins</a></li>
-      <li><a href="rates.html">Rates and Reservations</a></li>
-      <li><a href="story.html">Story of the Ranch</a></li>
-      <li><a href="attractions.html">Area Attractions</a></li>
-      <li><a href="photos.html">Photos and Directions</a></li>
-    </ul>
-  </nav>
-  <div class="content">
-    <h1>Story</h1>
-    <p>It's story time.</p>
-    <p style="margin-top: 350px;">End of content</p>
+  <header>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cabins.html">Cabins</a></li>
+        <li><a href="rates.html">Rates and Reservations</a></li>
+        <li><a href="story.html">Story of the Ranch</a></li>
+        <li><a href="attractions.html">Area Attractions</a></li>
+        <li><a href="photos.html">Photos and Directions</a></li>
+      </ul>
+    </nav>
+    <div class="bannerMessage" style="background-color:  rgba(179, 179, 179, 0.3); width: 100%; padding: 1rem 0">
+      <h1>THE CONTINENTAL RANCH</h1>
+      <h2>CABIN RENTALS</h2>
+      <h3>continentalranchatcreede@gmail.com</h3>
+    </div>
+  </header>
+  <div class="content" style="color: #86492D;">
+    <img src="/images/The_man.jpg" alt="John Dabney and his dog" style="float: left; width: 100%; max-width: 200px; height: auto; margin-right: 1rem;">
+    <div style="flex: 1; line-height: 1.5;">
+      <p>John G. Dabney built a ring of rental cabins and a family home using logs he cut on nearby Black Mountain.
+        Logs were hauled on a mule-drawn wagon across the creek to the building site. They were peeled and notched by hand.
+        Working alone much of the time, he elected to construct the buildings stockade style placing the logs upright.
+          He made benches, woodboxes, cupboards and tables for each cabin.</p>
+      <p>Ruth died in 1937. John's second wife Mary became a favorite with guests. After John's death, caretakers helped manage the ranch and formed bonds with many of our visitors.
+        John's family down to his great, great, great grandchildren continue to enjoy his legacy.</p>
+      <p>Decendants of the first ranch guests return each year. Some who first came as small children have been enjoying our mountains for over 50 years. 
+        We hope you will become a part of the  Continental Ranch family.</p>
+    </div>
+    <br><br>
+    <hr>
+    <div class="image-row" style="display: flex; gap: 1rem;">
+      <div class="oval-border" style="border-radius: 5%;">
+        <img src="/images/B&W1.jpg" alt="" class="popup-img" style="border-radius: 5%;">
+      </div>
+      <div class="oval-border" style="border-radius: 5%;">
+        <img src="/images/B&W2.jpg" alt="" class="popup-img" style="border-radius: 5%;">
+      </div>
+      <div class="oval-border" style="border-radius: 5%;">
+        <img src="/images/B&W3.jpg" alt="" class="popup-img" style="border-radius: 5%;">
+      </div>
+    </div>
+    <div id="imgModal">
+      <span class="closeBtn">&times;</span>
+      <img src="" alt="Full Size Image">
+    </div>
   </div>
-  <div class="content">
-    <h1>Welcome to the Continental Ranch</h1>
-    <p>This is an example page with a fixed background image that stays in place as you scroll.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-    <p>Scroll down to see the effect.</p>
-    <p style="margin-top: 150px;">End of content</p>
-  </div>
+  <footer style="text-align: center;">
+    <div style="position: relative;">
+      <img src="https://shoopity-word.github.io/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cabins.html">Cabins</a></li>
+        <li><a href="rates.html">Rates and Reservations</a></li>
+        <li><a href="story.html">Story of the Ranch</a></li>
+        <li><a href="attractions.html">Area Attractions</a></li>
+        <li><a href="photos.html">Photos and Directions</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="lightbox.js"></script>
 </body>
 </html>
 

@@ -25,7 +25,7 @@
     </div>
     <div class="bannerMessage" style="position: relative;">
       <div style="position: relative;">
-        <img src="https://shoopity-word.github.io/images/BG_banner_short.png"
+        <img src="/images/BG_banner_short.png"
           style="
             display: block;
             width: 100%;
@@ -35,19 +35,18 @@
         It's offset slightly as this image is the "top of a stack of images"
         The width needs to be the width of the DIV
         The max-width is 100% of the div minus the width offset * 2 (for left and right)-->
-        <img src="https://shoopity-word.github.io/images/View_Pano.jpg"
+        <img src="/images/View_Pano.jpg"
           style="
             position:absolute;
             display: block;
-            top: 11px;
-            left: 6px;
+            top: 6.3%;
+            left: 0.8%;
             width: 100%;
-            max-width: calc(100% - 12px);
-            height: auto;"
-          >
+            max-width: 98.4%;
+            height: auto;">
       </div>
       <div style="position: relative;">
-        <img src="https://shoopity-word.github.io/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
+        <img src="/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
       </div>
     </div>
   </header>
@@ -61,13 +60,13 @@
     </div>
     <div class="image-row" style="display: flex; gap: 1rem;">
       <div class="oval-border">
-        <img src="https://shoopity-word.github.io/images/2cabins.jpg" alt="Two Cabins" class="popup-img">
+        <img src="/images/2cabins.jpg" alt="Two Cabins" class="popup-img">
       </div>
       <div class="oval-border">
-        <img src="https://shoopity-word.github.io/images/2horses.jpg" alt="Two Hourses" class="popup-img">
+        <img src="/images/2horses.jpg" alt="Two Hourses" class="popup-img">
       </div>
       <div class="oval-border">
-        <img src="https://shoopity-word.github.io/images/bradley-house-1.jpg" alt="Main House" class="popup-img">
+        <img src="/images/bradley-house-1.jpg" alt="Main House" class="popup-img">
       </div>
     </div>
     <div id="imgModal">
@@ -75,7 +74,7 @@
       <img src="" alt="Full Size Image">
     </div>
     <p style="color: #8D5024; font-style: italic;">The Continental Ranch has been family owned and operated since 1924. </p>
-    <p style="color: #8D5024; font-style: italic;">We hope you’ll decide to join us for an unforgettable stay.</p>
+    <p style="color: #8D5024; font-style: italic;">We hope you'll decide to join us for an unforgettable stay.</p>
     <p>The Ranch is located in a high mountain park known as North Clear Creek Park, named for the stream that flows through the park and the Ranch property. 
       The elevation is about 10,000 feet above sea level making it an ideal place for folks to escape the hot summer weather of lower elevations.</p>
     <p>Surrounding the park and the Ranch are mountains, streams and lakes of the Rio Grande National Forest providing plenty of opportunity for fishing,
@@ -89,13 +88,13 @@
         <li>There are some signs as you turn onto the Forest Service Road pointing to the Continental Reservoir and Rito Hondo Reservoir.</li>
         <li>There is a small sign on the right side of Forest Road 513 that says "Continental Ranch Cabin Rentals 2 miles."</li>
         <li>You will cross two cattle guards.</li>
-        <li>The entrance to the ranch is on the left. <a href="https://continentalranchatcreede.com/photos-and-directions.html">Click for more detailed directions</a>.</li>
+        <li>The entrance to the ranch is on the left. <a href="photos-and-directions.html">Click for more detailed directions</a>.</li>
       </ul>
     </p>
   </div>
   <footer style="text-align: center;">
     <div style="position: relative;">
-      <img src="https://shoopity-word.github.io/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
+      <img src="/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
     </div>
     <nav class="main-nav">
       <ul class="nav-list">
@@ -108,38 +107,7 @@
       </ul>
     </nav>
   </footer>
-  <script>
-    const modal = document.getElementById('imgModal');
-    const modalImg = modal.querySelector('img');
-    const closeBtn = modal.querySelector('.closeBtn');
-
-    document.querySelectorAll('.popup-img').forEach(img => {
-      img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;   // Use same image src
-        modalImg.alt = img.alt || 'Full Size Image';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      modalImg.src = '';
-    });
-
-    modal.addEventListener('click', e => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        modalImg.src = '';
-      }
-    });
-
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && modal.style.display === 'flex') {
-        modal.style.display = 'none';
-        modalImg.src = '';
-      }
-    });
-  </script>
+  <script src="lightbox.js"></script>
 </body>
 </html>
 
