@@ -4,30 +4,167 @@
   <meta charset="UTF-8">
   <title>Continental Ranch at Creede</title>
   <link rel="stylesheet" href="Main.css">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
 <body id="cabins">
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cabins.html">Cabins</a></li>
-      <li><a href="rates.html">Rates and Reservations</a></li>
-      <li><a href="story.html">Story of the Ranch</a></li>
-      <li><a href="attractions.html">Area Attractions</a></li>
-      <li><a href="photos.html">Photos and Directions</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cabins.html">Cabins</a></li>
+        <li><a href="rates.html">Rates and Reservations</a></li>
+        <li><a href="story.html">Story of the Ranch</a></li>
+        <li><a href="attractions.html">Area Attractions</a></li>
+        <li><a href="photos.html">Photos and Directions</a></li>
+      </ul>
+    </nav>
+    <div class="bannerMessage" style="background-color:  rgba(241, 241, 241, 0.7); width: 100%; padding: 1rem 0">
+      <h1>THE CONTINENTAL RANCH</h1>
+      <h2>CABIN RENTALS</h2>
+      <h3>continentalranchatcreede@gmail.com</h3>
+    </div>
+    <div class="bannerMessage" style="position: relative;">
+      <div style="position: relative;">
+        <img src="https://shoopity-word.github.io/images/BG_banner_tall.png"
+          style="
+            display: block;
+            width: 100%;
+            height: auto;
+          ">
+        <!--The second image is absolute to float over the previous image
+        It's offset slightly as this image is the "top of a stack of images"
+        The width needs to be the width of the DIV
+        The max-width is 100% of the div minus the width offset * 2 (for left and right)-->
+        <img src="https://shoopity-word.github.io/images/Two_Styles.jpg"
+          style="
+            position:absolute;
+            display: block;
+            top: 11px;
+            left: 6px;
+            width: 100%;
+            max-width: calc(100% - 12px);
+            height: auto;"
+          >
+      </div>
+      <div style="position: relative;">
+        <img src="https://shoopity-word.github.io/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
+      </div>
+    </div>
+  </header>
   <div class="content">
-    <h1>Cabins</h1>
-    <p>This is a page for the Cabins</p>
-    <p style="margin-top: 150px;">End of content</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="https://shoopity-word.github.io/images/slideshow1.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow2.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow3.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow4.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow5.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow6.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow7.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow8.jpg" alt="">
+        <img src="https://shoopity-word.github.io/images/slideshow9.jpg" alt="">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <br>
+    <div style="color: #8D5024;">
+      The cabins are rustic and original.   Each cabin has a wood stove for heating.  There is no indoor plumbing or water.  Outhouses are located conveniently near each cabin.
+        We offer two styles of cabins.  Double cabins have two full beds and single cabins have one full bed.
+      <ul>
+        <li>Guests supply their own sleeping bags or bedding and pillows.  Beds have full size mattresses with mattress encasements that are sanitized between guests.</li>
+        <li>Each cabin has an outside picnic table and an outdoor fire ring.  Firewood is supplied.</li>
+        <li>Non potable water is available at the well.  Bring plenty of drinking water to stay hydrated at our 10,000 ft. elevation.</li>
+        <li>There are some cooking pots and pans in the cabins, but you may want to bring some with you. Most people use paper plates, plastic forks and spoons, etc.  Many guests bring propane grills.</li>
+        <li>There are two shower stalls and plenty of hot water in the shower house. You need to bring towels, soap, shampoo, etc.</li>
+        <li>A generator provides electric lights from dusk till 10:00 pm.  It's a good idea to bring lanterns or good flashlights.</li>
+        <li>Most cell phones have reception.</li>
+        <li>Rates and terms are found on the Rates and Reservations page.</li>
+      </ul>
+    </div>
   </div>
-  <div class="content">
-    <h1>Welcome to the Continental Ranch</h1>
-    <p>This is an example page with a fixed background image that stays in place as you scroll.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-    <p>Scroll down to see the effect.</p>
-    <p style="margin-top: 150px;">End of content</p>
-  </div>
+  <footer style="text-align: center;">
+    <div style="position: relative;">
+      <img src="https://shoopity-word.github.io/images/Divider.png" style="top: 100%; filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));">
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cabins.html">Cabins</a></li>
+        <li><a href="rates.html">Rates and Reservations</a></li>
+        <li><a href="story.html">Story of the Ranch</a></li>
+        <li><a href="attractions.html">Area Attractions</a></li>
+        <li><a href="photos.html">Photos and Directions</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-track img');
+    const carousel = document.querySelector('.carousel');
+    const totalImages = images.length;
+    let autoScrollInterval;
+    const intervalTime = 3000; // 3 seconds
+
+    function updateCarouselHeight() {
+      let maxHeight = 0;
+      images.forEach(img => {
+        if (img.complete) {
+          const scaledHeight = img.clientHeight; // effective height after scaling
+          if (scaledHeight > maxHeight) maxHeight = scaledHeight;
+        }
+      });
+      carousel.style.height = maxHeight + 'px';
+    }
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+      updateCarouselHeight();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      showImage(currentIndex);
+    }
+
+    function startAutoScroll() {
+      stopAutoScroll(); // avoid duplicates
+      autoScrollInterval = setInterval(nextImage, intervalTime);
+    }
+
+    function stopAutoScroll() {
+      clearInterval(autoScrollInterval);
+    }
+
+    // Event listeners for buttons
+    document.querySelector('.next').addEventListener('click', () => {
+      nextImage();
+    });
+    document.querySelector('.prev').addEventListener('click', () => {
+      prevImage();
+    });
+
+    // Pause auto-scroll on hover
+    carousel.addEventListener('mouseenter', stopAutoScroll);
+    carousel.addEventListener('mouseleave', startAutoScroll);
+
+    // Wait for all images to load before starting
+    window.addEventListener('load', () => {
+      updateCarouselHeight();
+      showImage(currentIndex);
+      startAutoScroll();
+    });
+
+    // Adjust on resize
+    window.addEventListener('resize', updateCarouselHeight);
+  </script>
 </body>
 </html>
 

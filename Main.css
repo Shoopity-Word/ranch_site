@@ -173,6 +173,7 @@ a {
   cursor: pointer;
 }
 
+/* Button Styling */
 #imgModal {
   display: none;
   position: fixed;
@@ -199,3 +200,69 @@ a {
   cursor: pointer;
   user-select: none;
 }
+/**********************************/
+
+/* Photo Carousell styling */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* height will be set via JS to the tallest rendered slide */
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* all slides stacked on top of each other */
+.carousel-track img {
+  position: absolute;
+  inset: 0 0 0 0;           /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;     /* avoid clicks on hidden slides */
+  object-fit: contain;      /* preserves aspect ratio and centers if needed */
+}
+
+/* visible slide */
+.carousel-track img.active {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* nav buttons hidden by default (opacity) and enabled on hover */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  pointer-events: none; /* disabled until visible to avoid accidental clicks */
+}
+
+/* show buttons when hovering the carousel */
+.carousel:hover .carousel-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* optional focus styles for keyboard users */
+.carousel-btn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+/****************************/
