@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('https://shoopity-word.github.io/images/BG_Wood_Slats.jpg');
+  background-image: url('./images/BG_Wood_Slats.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -51,9 +51,9 @@ a {
 
 .content {
   background-image:
-    url('https://shoopity-word.github.io/images/BG_content_top.png'),
-    url('https://shoopity-word.github.io/images/BG_content_bottom.png'),
-    url('https://shoopity-word.github.io/images/BG_content_mid.png');
+    url('./images/BG_content_top.png'),
+    url('./images/BG_content_bottom.png'),
+    url('./images/BG_content_mid.png');
   background-position: 
     top center,
     bottom center,
