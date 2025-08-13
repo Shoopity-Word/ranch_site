@@ -227,9 +227,9 @@ a {
 /* all slides stacked on top of each other */
 .carousel-track img {
   position: absolute;
-  inset: 0 0 0 0;           /* top:0; right:0; bottom:0; left:0; */
+  /*inset: 0 0 0 0;           /* top:0; right:0; bottom:0; left:0; */
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   pointer-events: none;     /* avoid clicks on hidden slides */
@@ -265,6 +265,7 @@ a {
   pointer-events: auto;
 }
 
+/* Carousel dots */
 .carousel-btn.prev { left: 10px; }
 .carousel-btn.next { right: 10px; }
 
@@ -272,5 +273,35 @@ a {
 .carousel-btn:focus {
   outline: 2px solid #fff;
   outline-offset: 2px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+
+.carousel-dots span {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-dots span.active {
+  width: 18px;
+  height: 18px;
+  background-color: rgba(255,255,255,1);
 }
 /****************************/
