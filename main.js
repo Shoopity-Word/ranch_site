@@ -1,3 +1,11 @@
+/******** Mobile Menu ***********************/
+document.getElementById('hamburger').addEventListener('click', function() {
+  const menu = document.getElementById('mobileMenu');
+  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+});
+/*********************************************/
+
+/*********** Lightbox stuff *****************/
 const modal = document.getElementById('imgModal');
 // Return null if there is no element on page
 const modalImg = modal ? modal.querySelector('img') : null;
@@ -32,10 +40,12 @@ if (modal && modalImg && closeBtn) {
       }
   });
 }
+/***********************************************************/
 
+//Automatically make any link that's not intneral open in a new tab
 document.querySelectorAll('a[href]').forEach(a => {
   const href = a.getAttribute('href');
-  if (href && !href.startsWith('#') && !href.startsWith('/') && !href.startsWith(window.location.origin)) {
+  if (href && !href.startsWith('#') && !href.startsWith('./') && !href.startsWith(window.location.origin)) {
     a.setAttribute('target', '_blank');
     a.setAttribute('rel', 'noopener noreferrer');  // security best practice
   }

@@ -19,7 +19,7 @@ body {
   color: black;
 }
 
-body#home .main-nav .nav-list li:nth-child(1) {
+/*body#home .main-nav .nav-list li:nth-child(1) {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
@@ -42,11 +42,16 @@ body#attractions .main-nav .nav-list li:nth-child(5) {
 body#photos .main-nav .nav-list li:nth-child(6) {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+}*/
+
+.main-nav .nav-list li.current-page {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 a {
   color: #b16b4a;
-  /* text-decoration: underline; */
 }
 
 .content {
@@ -122,12 +127,71 @@ a {
 
 .main-nav .nav-list li a:hover {
   color: #006699;
-  text-decoration: underline;
 }
 
 .main-nav .nav-list li.current-page a {
   font-weight: bold;
-  text-decoration: underline;
+}
+
+.hamburger {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  cursor: pointer;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none; /* hide desktop nav */
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background-color: #f5f2e9;
+    padding-top: 4rem;
+    z-index: 1500;
+  }
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mobile-menu li {
+    border-bottom: 1px solid #ccc;
+  }
+  .mobile-menu a {
+    display: block;
+    padding: 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+  .mobile-menu a:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
 }
 /******************************/
 
@@ -305,3 +369,16 @@ a {
   background-color: rgba(255,255,255,1);
 }
 /****************************/
+
+#paperclip {
+  position: absolute;
+  top: -1%;
+  left: 1.5%;
+  width: 350px; /* pick the fixed width you want */
+  height: 340px; /* pick the fixed height you want */
+}
+
+#paperclip img {
+  width: 100%;
+  height: 100%;
+}
