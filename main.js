@@ -75,7 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Automatically mark current page based on URL
       const linkPath = link.href.replace(/^\.\/+/,'');
-      const currentPath = (window.location.pathname === '/') ? 'index.html' : window.location.pathname.slice(1);
+      let currentPath = window.location.pathname;
+      if (currentPath.endsWith('/')) { currentPath += 'index.html'; }
+      currentPath = currentPath.slice(1);
       console.log(window.location.pathname)
       if (currentPath.endsWith(linkPath)) {
         li.classList.add('current-page');
