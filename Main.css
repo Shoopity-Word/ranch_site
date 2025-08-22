@@ -59,7 +59,7 @@ a {
   max-width: calc(var(--maxWidth) + 2*var(--padding));
   margin: 0 auto;
   text-align: center;
-  padding: var(--padding);
+  /*padding: var(--padding);*/
   padding-bottom: 0;
   position: relative;
   color: #E0BF5C;
@@ -72,11 +72,18 @@ a {
   padding: 1rem 0;
 }
 
-#divider {
-  background-image: url(./images/Divider.png);
-  height: 70px;
-  background-position: center;
-  background-repeat: no-repeat;
+.divider {
+  width: 100%;
+  max-width: 864px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.divider img {
+  width: 18.75%;
+  display: inline-block;
+  height: auto;
+  filter: drop-shadow(4px 4px 1px rgba(0,0,0,0.7));
 }
 
 /* Navigation Styles */
