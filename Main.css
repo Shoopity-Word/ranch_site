@@ -214,7 +214,7 @@ a {
   flex: 1 1 0;
   max-width: 33.33%;
   border: 1px solid #000000;
-  border-radius: 50% / 50%;
+  border-radius: 25% / 25%;
   overflow: hidden;
   padding: 2px;
   box-sizing: border-box;
@@ -227,7 +227,7 @@ a {
 .oval-border img {
   width: 100%;
   height: 100%;
-  border-radius: 50% / 50%;
+  border-radius: 25% / 25%;
   object-fit: cover;
   display: block;
 }
