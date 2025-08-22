@@ -178,7 +178,7 @@ a {
   .mobile-menu li {
     border-bottom: 1px solid #ccc;
   }
-  .mobile-menu li.currentpage {
+  .mobile-menu li.current-page {
     background-color: rgba(0, 0, 0, 0.3);
   }
   .mobile-menu a {

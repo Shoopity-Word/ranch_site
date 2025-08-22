@@ -73,8 +73,10 @@ const mNav = document.querySelector('header .mobile-menu');
     const li = document.createElement('li');
     
     // Automatically mark current page based on URL
-    const linkPath = link.href.replace(/^\.\/+/,''); 
-    if (window.location.pathname.endsWith(linkPath)) {
+    const linkPath = link.href.replace(/^\.\/+/,'');
+    const currentPath = (window.location.pathname === '/') ? 'index.html' : window.location.pathname.slice(1);
+    console.log(window.location.pathname)
+    if (currentPath.endsWith(linkPath)) {
       li.classList.add('current-page');
     }
 
