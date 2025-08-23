@@ -21,17 +21,17 @@
       <h3>continentalranchatcreede@gmail.com</h3>
     </div>
     <div class="bannerMessage" style="position: relative;">
-      <div style="position: relative;">
+      <!--<div style="position: relative;">
         <img src="./images/BG_banner_tall.png"
           style="
             display: block;
             width: 100%;
             height: auto;
           ">
-        <!--The second image is absolute to float over the previous image
+        ***comment this out!!!The second image is absolute to float over the previous image
         It's offset slightly as this image is the "top of a stack of images"
         The width needs to be the width of the DIV
-        The max-width is 100% of the div minus the width offset * 2 (for left and right)-->
+        The max-width is 100% of the div minus the width offset * 2 (for left and right)***down to here***
         <img src="./images/Two_Styles.jpg"
           style="
             position:absolute;
@@ -41,6 +41,20 @@
             width: 100%;
             max-width: 98.4%;
             height: auto;">
+      </div>-->
+      <div style="position: relative;">
+        <img src="./images/BG_banner_tall.png" style="display: block; width: 100%; height: auto;">
+        <!--overlay container-->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; gap: 5px; padding: 10px; box-sizing: border-box;">
+          <!-- cropped image -->
+          <div style="width: 590px; height: 340px; overflow: hidden; flex-shrink: 0; ">
+              <img src="./images/Ranch - looking southwest.JPG" style="width: 100%; height: auto; display: block; position: relative; top: 50%; transform: translateY(-50%);">
+          </div>
+          <div style="color: #563637; font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 800; text-align: left; text-shadow: none;">
+            We offer two styles of cabins.<br>
+            Double cabins have two full beds and single cabins have one full bed.
+          </div>
+        </div>
       </div>
       <div class="divider">
         <img src="./images/Divider.png">
