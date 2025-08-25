@@ -1,10 +1,18 @@
 let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-track img');
+const slides = document.querySelectorAll('.carousel-slide');
 const carousel = document.querySelector('.carousel');
-const totalImages = images.length;
+const totalImages = slides.length;
 let autoScrollInterval;
-const intervalTime = 3000; // 3 seconds
+const intervalTime = 3000;
 const dotsContainer = carousel.querySelector('.carousel-dots');
+
+slides.forEach(slide => {
+  const img = slide.querySelector('img');
+  const caption = slide.querySelector('.caption');
+  if (caption && img.alt) {
+    caption.textContent = img.alt;
+  }
+});
 
 function updateCarouselHeight() {
     if (document.body.id === 'fart') {
@@ -21,11 +29,12 @@ function updateCarouselHeight() {
 }
 
 function showImage(index) {
-    images.forEach((img, i) => {
-    img.classList.toggle('active', i === index);
-    });
-    updateDots();
-    updateCarouselHeight();
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    slide.querySelector('img').classList.toggle('active', i === index);
+  });
+  updateDots();
+  updateCarouselHeight();
 }
 
 function nextImage() {
@@ -70,14 +79,16 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', updateCarouselHeight);
 
 //Place the dots
-images.forEach((_, index) => {
-    const dot = document.createElement('span');
-    if (index === currentIndex) dot.classList.add('active');
-    dot.addEventListener('click', () => {
-        showImage(index);
-        resetAutoScroll();
-    });
-    dotsContainer.appendChild(dot);
+slides.forEach((_, index) => {
+  const dot = document.createElement('span');
+  if (index === currentIndex) dot.classList.add('active');
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    showImage(index);
+    stopAutoScroll();
+    startAutoScroll();
+  });
+  dotsContainer.appendChild(dot);
 });
 
 function updateDots() {

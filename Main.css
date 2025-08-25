@@ -279,6 +279,7 @@ a {
   position: relative;
   overflow: hidden;
   width: 100%;
+  container-type: inline-size;
   /* height will be set via JS to the tallest rendered slide */
 }
 
@@ -286,18 +287,6 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-/* all slides stacked on top of each other */
-.carousel-track img {
-  position: absolute;
-  /*inset: 0 0 0 0;           /* top:0; right:0; bottom:0; left:0; */
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  pointer-events: none;     /* avoid clicks on hidden slides */
-  object-fit: contain;      /* preserves aspect ratio and centers if needed */
 }
 
 /* visible slide */
@@ -341,32 +330,85 @@ a {
 
 .carousel-dots {
   position: absolute;
-  bottom: 5px;
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  column-gap: 8px;                 /* fallback spacing */
   background-color: rgba(0,0,0,0.4);
   border-radius: 10px;
+  padding: 4px 8px;
+  z-index: 10;
 }
 
 .carousel-dots span {
-  width: 12px;
+  width: 12px;                     /* fallback size */
   height: 12px;
-  background-color: rgba(255,255,255,0.6);
   border-radius: 50%;
-  display: inline-block;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  background: rgba(255,255,255,0.7);
 }
 
 .carousel-dots span.active {
-  width: 18px;
-  height: 18px;
-  background-color: rgba(255,255,255,1);
+  background: rgba(255,255,255,1);
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-slide .caption {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  /*font-size: 0.95rem;              /* fallback */
+  padding: 2px 6px;
+  border-radius: 8px;
+  max-width: 80%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.carousel-slide.active .caption { opacity: 1; }
+
+@supports (container-type: inline-size) {
+  .carousel-dots {
+    column-gap: 1.2cqi;            /* scales with .carousel width */
+    padding: 0.4cqi 0.8cqi;
+    border-radius: 1cqi;
+  }
+  .carousel-dots span {
+    width: clamp(8px, 1.6cqi, 18px);
+    height: clamp(8px, 1.6cqi, 18px);
+  }
+  .carousel-dots span.active {
+    width: clamp(10px, 2.2cqi, 22px);
+    height: clamp(10px, 2.2cqi, 22px);
+  }
 }
 /****************************/
 
@@ -374,11 +416,29 @@ a {
   position: absolute;
   top: -1%;
   left: 1.5%;
-  width: 350px; /* pick the fixed width you want */
-  height: 340px; /* pick the fixed height you want */
+  width: 40%;
+  aspect-ratio: 1;
+  z-index: 2;
+  container-type: inline-size;
 }
 
 #paperclip img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+}
+
+#paperclip div {
+  top: 5%;
+  left: 5%;
+  width: 90%; /* relative to #paperclip */
+  font-family: Verdana, sans-serif;
+  font-size: clamp(6px, 4cqi, 14px);
+  color: #86492D;
+  text-align: left;
+}
+
+#paperclip div button {
+  font-size: clamp(10px, 4cqi, 16px); /* button text scales */
+  padding: clamp(4px, 5cqi, 20px) clamp(8px, 5cqi, 35px); /* button size scales */
 }
